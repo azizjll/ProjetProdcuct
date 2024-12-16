@@ -1,0 +1,25 @@
+<h2>Ajouter un appartement</h2>
+<form (ngSubmit)="addApartment()" #apartmentForm="ngForm">
+  <label for="apartNum">Numéro :</label>
+  <input type="number" id="apartNum" [(ngModel)]="apartment.apartNum" name="apartNum" required />
+  <br />
+  <label for="floorNum">Étage :</label>
+  <input type="number" id="floorNum" [(ngModel)]="apartment.floorNum" name="floorNum" required />
+  <br />
+  <label for="surface">Surface :</label>
+  <input type="number" id="surface" [(ngModel)]="apartment.surface" name="surface" required />
+  <br />
+  <label for="terrace">Terrasse :</label>
+  <input type="checkbox" id="terrace" [(ngModel)]="apartment.terrace" name="terrace" />
+  <br />
+  <label for="surfaceTerrace">Surface terrasse :</label>
+  <input type="number" id="surfaceTerrace" [(ngModel)]="apartment.surfaceTerrace" name="surfaceTerrace" />
+  <br />
+  <label for="category">Catégorie :</label>
+  <input type="text" id="category" [(ngModel)]="apartment.category" name="category" required />
+  <br />
+  <label for="ResidenceId">Résidence ID :</label>
+  <input type="number" id="ResidenceId" [(ngModel)]="apartment.ResidenceId" name="ResidenceId" required />
+  <br />
+  <button type="submit" [disabled]="!apartmentForm.valid">Ajouter</button>
+</form>

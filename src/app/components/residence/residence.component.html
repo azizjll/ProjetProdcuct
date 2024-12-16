@@ -1,0 +1,19 @@
+<h2>Liste des résidences</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Adresse</th>
+      <th>Statut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let residence of residences; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ residence.name }}</td>
+      <td>{{ residence.address }}</td>
+      <td>{{ residence.status }}</td>
+    </tr>
+  </tbody>
+</table>

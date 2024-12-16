@@ -1,0 +1,60 @@
+<h2>Ajouter une résidence</h2>
+<form (ngSubmit)="addResidence()" #residenceForm="ngForm">
+  <div>
+    <label for="name">Nom :</label>
+    <input
+      type="text"
+      id="name"
+      [(ngModel)]="residence.name"
+      name="name"
+      required
+      minlength="5"
+      #name="ngModel"
+    />
+    <div *ngIf="name.invalid && name.touched" class="error-message">
+      <div *ngIf="name.errors?.['required']">Le nom est requis.</div>
+      <div *ngIf="name.errors?.['minlength']">Le nom doit contenir au moins 5 caractères.</div>
+    </div>
+  </div>
+
+  <div>
+    <label for="address">Adresse :</label>
+    <input
+      type="text"
+      id="address"
+      [(ngModel)]="residence.address"
+      name="address"
+      required
+      minlength="5"
+      #address="ngModel"
+    />
+    <div *ngIf="address.invalid && address.touched" class="error-message">
+      <div *ngIf="address.errors?.['required']">L'adresse est requise.</div>
+      <div *ngIf="address.errors?.['minlength']">L'adresse doit contenir au moins 5 caractères.</div>
+    </div>
+  </div>
+
+  <div>
+    <label for="image">Image URL (facultatif) :</label>
+    <input
+      type="text"
+      id="image"
+      [(ngModel)]="residence.image"
+      name="image"
+      #image="ngModel"
+    />
+  </div>
+
+  <div>
+    <label for="status">Statut :</label>
+    <select id="status" [(ngModel)]="residence.status" name="status" required #status="ngModel">
+      <option value="Active">Active</option>
+      <option value="Inactive">Inactive</option>
+    </select>
+    <div *ngIf="status.invalid && status.touched" class="error-message">
+      <div *ngIf="status.errors?.['required']">Le statut est requis.</div>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!residenceForm.valid">Ajouter</button>
+</form>

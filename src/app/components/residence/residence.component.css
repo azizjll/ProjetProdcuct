@@ -1,0 +1,64 @@
+/* Style global pour la table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les en-têtes de la table */
+th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Style pour les cellules de la table */
+td {
+  background-color: #f9f9f9;
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Style pour la ligne de survol */
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Style pour le corps de la table */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* Ajout d'un espacement et d'une bordure pour le tableau global */
+table, th, td {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Style pour les bordures et les espacements */
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Ajouter un style pour le tableau avec une meilleure mise en page */
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Ajouter un effet d'ombre sur le tableau pour plus de contraste */
+table {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}

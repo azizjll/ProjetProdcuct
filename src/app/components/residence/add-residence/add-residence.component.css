@@ -1,0 +1,91 @@
+/* Style global pour le formulaire */
+form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les titres de formulaire */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Style pour les labels des champs */
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Style pour les champs de texte et select */
+input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Style pour le champ d'input qui a un focus */
+input[type="text"]:focus, select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Style pour les boutons */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Espacement entre les champs de formulaire */
+br {
+  margin-bottom: 10px;
+}
+
+/* Style général du formulaire avec un padding */
+form {
+  padding: 20px;
+}
+
+/* Ajouter un effet de survol sur les champs et le bouton pour plus d'interaction */
+input[type="text"]:hover, select:hover {
+  border-color: #66bb6a;
+}
+
+/* styles.css ou add-residence.component.css */
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border-color: red;
+}
